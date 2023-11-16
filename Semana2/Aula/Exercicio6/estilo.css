@@ -1,0 +1,23 @@
+.caixa{
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+  position:absolute;
+}
+
+.caixa2{
+  background-color: red;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  top: 200px;
+}
+
+.caixa3{
+  background-color: black;
+  width: 80px;
+  height: 80px;
+  position:relative;
+  top: 150px;
+}

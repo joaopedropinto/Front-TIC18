@@ -1,0 +1,21 @@
+.caixa {
+  background-color: lightblue;
+  width: 200px;
+  height: 200px;
+} 
+
+@media (max-width:772px){
+  .caixa{
+    background-color: lightcoral;
+  }
+}
+@media (min-width:773ppx) and (max-width:1100px){
+  .caixa{
+    background-color: lightgreen;
+  }
+}
+@media (min-width:1101px){
+  .caixa{
+    background-color: lightgoldenrodyellow;
+  }
+}
