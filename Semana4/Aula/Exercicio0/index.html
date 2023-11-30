@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="inputTarefa"
+      placeholder="Entre com uma tarefa"
+      required
+    />
+    <button type="submit" onclick="adicionaTarefa()">Adicione</button>
+    <ul id="listaTarefas"></ul>
+
+    <script>
+      const listaTarefas = [];
+
+      function adicionaTarefa() {
+        let tarefa = document.getElementById("inputTarefa").value;
+        let ul = document.getElementById("listaTarefas");
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(tarefa));
+        ul.appendChild(li);
+        listaTarefas.push(tarefa);
+
+        localStorage.setItem("tarefas", listaTarefas);
+      }
+      function recuperaTarefas() {
+        let tarefas = JSON.parse(localStorage.getItem("tarefas"));
+       
+
+      }
+    </script>
+  </body>
+</html>
