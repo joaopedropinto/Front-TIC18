@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Computador {
+        constructor(preco, processador, memoria, disco) {
+          this.preco = preco;
+          this.processador = processador;
+          this.memoria = memoria;
+          this.disco = disco;
+        }
+        display() {
+          return this.preco + " " + this.processador + " " + this.memoria + " " + this.disco;
+        }
+        computando() {
+          return "Computando...";
+        }
+      }
+
+      let computador1 = new Computador(1000, "Intel", 8, 500);
+      let computador2 = new Computador(2000, "AMD", 16, 1000);
+      let computador3 = new Computador(3000, "Intel", 32, 2000);
+
+      let computador1map = new Map(Object.entries(computador1));
+      let computador2map = new Map(Object.entries(computador2));
+      let computador3map = new Map(Object.entries(computador3));
+
+      function usingMap(map){
+
+      }
+      function mostraComputadores() {
+        console.log(computador1.display());
+        console.log(computador2.display());
+        console.log(computador3.display());
+      }
+    </script>
+  </body>
+</html>
