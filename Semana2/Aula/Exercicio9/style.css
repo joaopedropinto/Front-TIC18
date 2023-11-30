@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px;
+  grid-auto-rows: 80px; 
+  gap: 15px;
+  /* justify-items: start; */
+}
+
+#A1 {
+  background-color: green;
+  grid-column: 1/-2;
+  grid-row: 1;
+ 
+}
+#A2 {
+  background-color: red;
+  grid-row: 1/7;
+}
+#A3 {
+  background-color: blue;
+}
+#A4 {
+  background-color: green;
+}
+#A5 {
+  background-color: pink;
+}
+#A6 {
+  background-color: yellow;
+}
+#A7 {
+  background-color: red;
+}
+#A8 {
+  background-color: blue;
+}
+#A9 {
+  background-color: green;
+}
+#A10 {
+  background-color: pink;
+}
+
