@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inserção</title>
+    <style>
+        /* Adicione estilos CSS conforme necessário */
+    </style>
+</head>
+<body>
+    <form id="formNovoRoteiro">
+        <label for="destinoNovo">Destino:</label>
+        <input type="text" id="destinoNovo" required>
+
+        <label for="dataPartidaNovo">Data de Partida:</label>
+        <input type="date" id="dataPartidaNovo" required>
+
+        <label for="duracaoNovo">Duração (dias):</label>
+        <input type="number" id="duracaoNovo" required>
+
+        <label for="imagemUrlNovo">URL da Imagem:</label>
+        <input type="url" id="imagemUrlNovo" required>
+
+        <button type="button" id="btnInserir" onclick="inserirRoteiro()">Inserir</button>
+    </form>
+
+    <hr>
+
+    <div class="container-destinos" id="containerDestinos">
+        <!-- A lista de destinos será inserida aqui dinamicamente -->
+    </div>
+
+    <script>
+        function inserirRoteiro() {
+            // Captura informações do formulário
+            var destino = document.querySelector('#destinoNovo').value;
+            var dataPartida = document.querySelector('#dataPartidaNovo').value;
+            var duracao = document.querySelector('#duracaoNovo').value;
+            var imagemUrl = document.querySelector('#imagemUrlNovo').value;
+
+            // Cria um novo elemento div com a classe roteiros-viagens
+            var novoRoteiro = document.createElement('div');
+            novoRoteiro.className = 'roteiros-viagens';
+
+            // Adiciona conteúdo ao novo roteiro
+            novoRoteiro.innerHTML = `
+                <img src="${imagemUrl}" class="postal">
+                <div class="roteiro-destino">${destino}</div>
+                <ul class="roteiro-incluso">
+                    <li>Áereo ida e volta</li>
+                    <li>${duracao} diárias</li>
+                    <li>Café da Manhã</li>
+                </ul>
+                <div class="roteiro-preco">R$${calcularPreco(duracao)}</div>
+                <div class="roteiro-obs">Taxas Inclusas</div>
+                <div class="roteiro-parcelamento">Em até 10x sem Juros</div>
+                <button class="roteiro-comprar" onclick="comprarRoteiro('${destino}', ${calcularPreco(duracao)})">Comprar</button>
+            `;
+
+            // Insere o novo roteiro na lista de destinos
+            document.getElementById('containerDestinos').appendChild(novoRoteiro);
+        }
+
+        function calcularPreco(duracao) {
+            // Implemente uma lógica para calcular o preço com base na duração (exemplo simples)
+            return duracao * 150;
+        }
+    </script>
+</body>
+</html>

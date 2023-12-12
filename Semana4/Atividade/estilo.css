@@ -1,0 +1,72 @@
+.container-destinos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 10px;
+}
+
+.roteiros-viagens{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  background-color: #e8d4fc;
+  color:#792ebc;
+  padding: 15px;
+  max-width: 200px;
+
+  font-weight:900;
+}
+.roteiro-preco{
+  font-size: x-large;
+  font-weight: bolder;
+  gap:5px;
+}
+.roteiro-obs, .roteiro-parcelamento{
+  font-size: small;
+}
+
+img {
+  width: 130px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.roteiro-comprar{
+  border-radius: 8px;
+  color:whitesmoke;
+  background-color: #90d424;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transform: scale(1);
+}
+.roteiro-comprar:hover {
+  background-color: #4285f4; 
+  color: #ffffff;
+  cursor: pointer; 
+}
+.roteiro-comprar:active {
+  transform: scale(0.9); /* Reduz o tamanho quando o botão está sendo clicado */
+}
+ul {
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+ul li:before {
+  content: "✓";
+  margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+  .container-destinos {
+    flex-direction: column;
+    height: auto;
+  }
+}
