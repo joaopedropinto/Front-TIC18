@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AraraComponent } from './arara/arara.component';
 import { LeaoComponent } from './leao/leao.component';
+import { AcessoComponent } from './acesso/acesso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AraraComponent,
-    LeaoComponent
+    LeaoComponent,
+    AcessoComponent
   ],
   imports: [
     BrowserModule,
