@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+  
+    background-color: lightblue;
+  
+    width: 100vw;
+    bottom: 0;
+    height: 50px;
+  
+    font-size: 2em;
+    font-family: fantasy;
+  }
+
+  @media (max-width: 500px) {
+   
+  
+    footer {
+      position: static;
+    }
+  }

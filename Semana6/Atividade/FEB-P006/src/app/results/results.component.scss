@@ -1,0 +1,15 @@
+#item5 {
+  display: flex;
+  flex-direction: column;
+  background: rgba(156, 153, 153, 0.24);
+  border-radius: 16px;
+  padding: 30px;
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  .container-results {
+    font-size: 12px;
+  }
+}
