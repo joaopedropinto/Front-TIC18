@@ -1,0 +1,10 @@
+<div>
+  <input type="file" (change)="onFileSelected($event)" accept=".json" style="margin-bottom: 10px;">
+
+  <div class="categorias">
+    <button class="categoria-titulo">Categorias</button>
+    <button class="categoria" *ngFor="let categoria of categorias" (click)="selecionarCategoria(categoria)">
+      {{ categoria }}
+    </button>
+  </div>
+</div>
